@@ -1,0 +1,215 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+header img {
+  max-width: 200px;
+  height: auto;
+  
+}
+header h1 {
+  color: #c00;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- SEÇÃO "SOBRE NÓS" --- */
+.sobre-nos {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 30px;
+}
+.sobre-nos img {
+  width: 100%;
+  max-width: 500px; 
+  max-height: 450px; 
+  object-fit: cover; 
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+.sobre-nos h2 {
+  color: #c00;
+  border-bottom: none;
+  margin-top: 0;
+}
+.sobre-nos p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.menu-category {
+  margin-bottom: 40px;
+}
+/* --- ALTERAÇÃO AQUI --- */
+.menu-category h2 {
+  color: #c00;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  text-align: center; /* ADICIONADO: Centraliza os títulos */
+}
+
+/* --- CADA ITEM DO CARDÁPIO --- */
+.menu-entry {
+  margin-bottom: 30px;
+}
+.item-photo {
+  max-width: 100%;
+  max-height: 450px;
+  height: auto;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); 
+}
+.btn-quero {
+  display: inline-block;
+  background-color: #2f5a3a;
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+.btn-quero:hover {
+  background-color: #1e3a25;
+}
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 5px;
+}
+.item-name {
+  font-weight: bold;
+  flex: 1;
+}
+.item-price {
+  font-weight: bold;
+  color: #c00;
+}
+.serves {
+  font-size: 0.8em;
+  color: #777;
+  text-align: right;
+  margin-top: -5px;
+  margin-bottom: 15px;
+}
+.options {
+  font-size: 0.9em;
+  margin-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+/* --- NOTA DE ENCOMENDA E CONTATO --- */
+.note {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #008000;
+}
+.contact {
+  text-align: center;
+  font-size: 1em;
+  margin-top: 10px;
+}
+.social-links {
+  margin-top: 15px;
+}
+.social-links a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  font-size: 0.9em;
+}
+.social-links a.whatsapp {
+  background-color: #25D366;
+}
+.social-links a.instagram {
+  background-color: #C13584;
+}
+
+/* ===== EFEITO FLOCos DE NEVE (EMOJI) ===== */
+
+@keyframes fall {
+  from {
+    transform: translateY(-10vh) translateX(0);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateY(110vh) translateX(20px);
+    opacity: 1;
+  }
+}
+
+@keyframes fall-reverse {
+  from {
+    transform: translateY(-10vh) translateX(0);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateY(110vh) translateX(-20px);
+    opacity: 1;
+  }
+}
+
+.snowflake {
+  position: fixed;
+  top: 0;
+  
+  color: #fff;
+  text-shadow: 0 0 3px #fff, 0 0 8px #fff; 
+
+  pointer-events: none;
+  z-index: 9999;
+  
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.snowflake.sway {
+  animation-name: fall-reverse;
+}
