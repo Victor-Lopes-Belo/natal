@@ -332,31 +332,31 @@
         </div>
       </div>
     </div>
-    <script>
+<script>
       function createSnowflake() {
-        const snowflake = document.createElement("span"); // Mudei para 'span'
-        snowflake.innerHTML = "❄️"; // ADICIONADO O EMOJI
-        snowflake.classList.add("snowflake");
-
-        // Posição horizontal aleatória
-        snowflake.style.left = Math.random() * 100 + "vw";
-
-        // MUDANÇA: Tamanho aleatório (de 10px a 20px)
-        const size = Math.random() * 10 + 10;
-        snowflake.style.fontSize = size + "px";
-
-        // Opacidade aleatória
+        const snowflake = document.createElement('span'); 
+        snowflake.innerHTML = '❄️'; 
+        snowflake.classList.add('snowflake');
+        
+        snowflake.style.left = Math.random() * 100 + 'vw';
+        
+        const size = Math.random() * 10 + 10; 
+        snowflake.style.fontSize = size + 'px';
+        
         snowflake.style.opacity = Math.random() * 0.5 + 0.3;
-
-        // Duração e Atraso aleatórios
-        snowflake.style.animationDuration = Math.random() * 5 + 5 + "s";
-        snowflake.style.animationDelay = Math.random() * 5 + "s";
-
-        // Variação de balanço
+        
+        snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+        
+        /* --- MUDANÇA AQUI ---
+         Usamos um atraso negativo aleatório. Isso faz os flocos
+         começarem a animação em pontos diferentes, já caindo.
+        */
+        snowflake.style.animationDelay = (Math.random() * -10) + 's'; 
+        
         if (Math.random() > 0.5) {
-          snowflake.classList.add("sway");
+          snowflake.classList.add('sway');
         }
-
+        
         document.body.appendChild(snowflake);
       }
 
@@ -367,4 +367,5 @@
     </script>
   </body>
 </html>
+
 
