@@ -1,6 +1,6 @@
-/* ===== ADICIONADO: Reset Global para Scroll Lateral ===== */
+/* ===== Reset Global para Scroll Lateral ===== */
 html {
-  overflow-x: hidden; /* Força a não ter scroll */
+  overflow-x: hidden;
   width: 100%;
 }
 
@@ -10,12 +10,11 @@ body {
   padding: 0;
   background-color: #f8f8f8;
   color: #333;
-  overflow-x: hidden; /* Garantia dupla */
+  overflow-x: hidden;
   width: 100%;
-  word-wrap: break-word; /* Quebra palavras longas */
-  box-sizing: border-box; /* Garante que o body não vaze */
+  word-wrap: break-word;
+  box-sizing: border-box;
 }
-/* Garante que padding/borda não aumentem o tamanho dos elementos */
 *, *::before, *::after {
   box-sizing: inherit;
 }
@@ -29,12 +28,16 @@ header {
   width: 100%;
   border-bottom: 1px solid #eee;
   margin-bottom: 20px;
-  box-sizing: border-box; /* Garante que o padding não vaze */
+  box-sizing: border-box;
 }
+
+/* --- CORREÇÃO DA LOGO AQUI --- */
 header img {
-  max-width: 100%; /* Garante que a logo não vaze */
+  max-width: 200px; /* REVERTIDO: Impede a logo de ficar gigante */
   height: auto;
 }
+/* --- FIM DA CORREÇÃO --- */
+
 header h1 {
   color: #c00;
   font-size: 2.5em; 
@@ -43,14 +46,14 @@ header h1 {
 }
 
 .container {
-  width: 100%; /* Garante que o container não vaze */
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
   background-color: #fff;
   padding: 30px; 
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; /* Garante que o padding não vaze */
+  box-sizing: border-box;
 }
 
 /* --- SEÇÃO "SOBRE NÓS" --- */
