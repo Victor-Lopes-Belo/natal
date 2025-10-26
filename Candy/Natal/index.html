@@ -338,10 +338,7 @@
         snowflake.innerHTML = '❄️'; 
         snowflake.classList.add('snowflake');
         
-        /* --- MUDANÇA AQUI ---
-         Impede que o floco comece "fora" da tela, causando scroll.
-         O máximo agora é 98% da largura da tela.
-        */
+        /* --- CORREÇÃO DO SCROLL AQUI --- */
         snowflake.style.left = Math.random() * 98 + 'vw'; 
         
         const size = Math.random() * 10 + 10; 
@@ -351,6 +348,7 @@
         
         snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';
         
+        /* --- CORREÇÃO DO BUG "PARADO" AQUI --- */
         snowflake.style.animationDelay = (Math.random() * -10) + 's'; 
         
         if (Math.random() > 0.5) {
@@ -367,6 +365,7 @@
     </script>
   </body>
 </html>
+
 
 
 
