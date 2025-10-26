@@ -338,8 +338,8 @@
         snowflake.innerHTML = '❄️'; 
         snowflake.classList.add('snowflake');
         
-        /* --- CORREÇÃO DO SCROLL AQUI --- */
-        snowflake.style.left = Math.random() * 98 + 'vw'; 
+        /* --- CORREÇÃO MAIS SEGURA (95vw) --- */
+        snowflake.style.left = Math.random() * 95 + 'vw'; 
         
         const size = Math.random() * 10 + 10; 
         snowflake.style.fontSize = size + 'px';
@@ -348,7 +348,6 @@
         
         snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';
         
-        /* --- CORREÇÃO DO BUG "PARADO" AQUI --- */
         snowflake.style.animationDelay = (Math.random() * -10) + 's'; 
         
         if (Math.random() > 0.5) {
@@ -365,7 +364,3 @@
     </script>
   </body>
 </html>
-
-
-
-
