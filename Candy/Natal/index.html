@@ -338,7 +338,11 @@
         snowflake.innerHTML = '❄️'; 
         snowflake.classList.add('snowflake');
         
-        snowflake.style.left = Math.random() * 100 + 'vw';
+        /* --- MUDANÇA AQUI ---
+         Impede que o floco comece "fora" da tela, causando scroll.
+         O máximo agora é 98% da largura da tela.
+        */
+        snowflake.style.left = Math.random() * 98 + 'vw'; 
         
         const size = Math.random() * 10 + 10; 
         snowflake.style.fontSize = size + 'px';
@@ -347,10 +351,6 @@
         
         snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';
         
-        /* --- MUDANÇA AQUI ---
-         Usamos um atraso negativo aleatório. Isso faz os flocos
-         começarem a animação em pontos diferentes, já caindo.
-        */
         snowflake.style.animationDelay = (Math.random() * -10) + 's'; 
         
         if (Math.random() > 0.5) {
@@ -367,5 +367,6 @@
     </script>
   </body>
 </html>
+
 
 
